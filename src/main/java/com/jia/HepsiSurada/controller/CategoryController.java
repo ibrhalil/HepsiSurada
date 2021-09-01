@@ -3,6 +3,7 @@ package com.jia.HepsiSurada.controller;
 import java.util.List;
 import java.util.UUID;
 
+import com.jia.HepsiSurada.model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,7 +33,7 @@ public class CategoryController
 	}
 	
 	@GetMapping("/all")
-	public DataResult<List<CategoryDTO>> getCategoryList()
+	public DataResult<List<Category>> getCategoryList()
 	{
 		return categoryService.getCategoryList();
 	}

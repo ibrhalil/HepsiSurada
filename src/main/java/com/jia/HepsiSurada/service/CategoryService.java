@@ -16,7 +16,9 @@ public interface CategoryService
 {
 	public Result addCategory(CategoryDTO categoryDTO);
 
-	public DataResult<List<CategoryDTO>> getCategoryList();
+	//public DataResult<List<CategoryDTO>> getCategoryList();
+
+	public DataResult<List<Category>> getCategoryList();
 
 	public Result deleteCategorById(String id);
 

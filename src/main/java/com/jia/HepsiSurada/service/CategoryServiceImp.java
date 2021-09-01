@@ -30,14 +30,15 @@ public class CategoryServiceImp implements CategoryService
 	}
 
 	@Override
-	public DataResult<List<CategoryDTO>> getCategoryList() 
+	public DataResult<List<Category>> getCategoryList()
 	{
 		List<Category> categories = categoryRepository.findAll();
-		List<CategoryDTO> categDTO = new ArrayList<>();
+		return new SuccessDataResult<List<Category>>(categories,"Category Listelendi");
+		/*List<CategoryDTO> categDTO = new ArrayList<>();
 		for (Category categ : categories) {
 			categDTO.add(new CategoryDTO(categ.getName()));
 		}
-		return new SuccessDataResult<List<CategoryDTO>>(categDTO,"Category Listelendi");
+		return new SuccessDataResult<List<CategoryDTO>>(categDTO,"Category Listelendi");*/
 	}
 
 	@Override
